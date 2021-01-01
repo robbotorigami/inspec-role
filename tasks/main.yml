@@ -66,8 +66,8 @@
         update: --no-document
         EOT
         source /home/vagrant/.rvm/scripts/rvm
-        IFS=' ' read -a parts <<< $(rvm config-get | grep ruby_version)
-        export PATH="~/.gem/ruby/${parts[1]}/bin:$PATH"
+        rvm install 2.7
+        rvm use 2.7 --default
         gem install inspec inspec-bin
       args:
         executable: /bin/bash
