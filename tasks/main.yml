@@ -110,7 +110,7 @@
   block:
   - name: install inspec, if Alpine 3.10
     shell: |
-      gem install --user-install --no-rdoc --no-ri inspec:4.18.0 inspec-bin webrick
+      gem install --user-install --no-rdoc --no-ri chef-utils -v 16.6.14 && gem install --user-install --no-rdoc --no-ri inspec:4.18.0 inspec-bin webrick
     args:
       executable: /bin/bash
       warn: no
